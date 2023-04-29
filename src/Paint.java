@@ -1,10 +1,16 @@
-import java.util.Scanner;
+import jdk.jfr.internal.tool.Main;
 
-public class Paint {
+import javax.swing.*;
+import java.awt.*;
+
+public class Paint extends JComponent {
     public static void main(String[] args) {
-        Scanner S= new Scanner();
-        int x=S.nextInt();
-      int  y=S.nextInt();
-        System.out.println(x+y);
+        JFrame frame = new JFrame("My mini paint");
+        frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
+        frame.setSize(600,600);
+        frame.setLocation(500,300);
+        frame.getContentPane().add(new Paint());
+        frame.setVisible(true);
+
     }
 }
